@@ -10,27 +10,16 @@ using System.Windows.Forms;
 
 namespace INTEL8086SYMULATOR
 {
+
+   
+    
+
     public partial class Form1 : Form
     {
-        
+        string AX_VALUE, BX_VALUE, CX_VALUE, DX_VALUE, AH_VALUE, AL_VALUE, BH_VALUE, H_VALUE, CL_VALUE, CH_VALUE,DX_VALUE , DH_VALUE, DL_VALUE;
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -38,7 +27,22 @@ namespace INTEL8086SYMULATOR
 
         }
 
-        private void textBox17_TextChanged(object sender, EventArgs e)
+        private void AX_POLE_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CX_TEXT_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BX_WARTOSC_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AL_NAPIS_TextChanged(object sender, EventArgs e)
         {
 
         }
