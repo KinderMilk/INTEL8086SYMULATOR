@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:INTEL8086_SYMULATOR"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="600" Width="800">
+    <Grid Margin="0,0,0,-1">
         <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="50,33,0,0"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="AX" VerticalAlignment="Top" Margin="10,34,0,0" Height="22"/>
         <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="50,139,0,0"/>
@@ -15,14 +15,18 @@
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="BX" VerticalAlignment="Top" Margin="11,68,0,0"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="CX" VerticalAlignment="Top" Margin="10,103,0,0"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="DX" VerticalAlignment="Top" Margin="11,140,0,0"/>
-        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="11,193,0,0"/>
-        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="11,229,0,0"/>
-        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,270,0,0"/>
-        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,310,0,0"/>
-        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="127,193,0,0"/>
-        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="127,229,0,0"/>
-        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="127,270,0,0"/>
-        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="127,310,0,0"/>
+        <Button Content="MOV AX,BX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="11,193,0,0"/>
+        <Button Content="MOV AX,CX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="11,218,0,0"/>
+        <Button Content="MOV AX,DX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="11,243,0,0" RenderTransformOrigin="0.538,-0.694"/>
+        <Button Content="MOV BX,AX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="11,270,0,0"/>
+        <Button Content="MOV BX,CX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="11,295,0,0"/>
+        <Button Content="MOV BX,DX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="11,320,0,0" RenderTransformOrigin="-1.081,5.118"/>
+        <Button Content="MOV CX,AX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,345,0,0"/>
+        <Button Content="MOV CX,BX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="11,370,0,0"/>
+        <Button Content="MOV CX,DX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="11,395,0,0" RenderTransformOrigin="0.538,-2.123"/>
+        <Button Content="MOV DX,AX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,420,0,0"/>
+        <Button Content="MOV DX,BX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="11,445,0,0"/>
+        <Button Content="MOV DX,CX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="11,470,0,0"/>
 
     </Grid>
 </Window>
