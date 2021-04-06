@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 
-namespace INTEL8086SYMULATOR.Properties
+namespace INTEL8086_SYMULATOR.Properties
 {
     /// <summary>
     ///   Silnie typizowana klasa zasobów do wyszukiwania zlokalizowanych ciągów itd.
@@ -43,7 +43,7 @@ namespace INTEL8086SYMULATOR.Properties
             {
                 if ((resourceMan == null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("INTEL8086SYMULATOR.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("INTEL8086_SYMULATOR.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
