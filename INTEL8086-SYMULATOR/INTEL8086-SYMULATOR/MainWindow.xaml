@@ -8,6 +8,21 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="50,33,0,0"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="AX" VerticalAlignment="Top" Margin="10,34,0,0" Height="22"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="50,139,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="50,102,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="50,67,0,0"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="BX" VerticalAlignment="Top" Margin="11,68,0,0"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="CX" VerticalAlignment="Top" Margin="10,103,0,0"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="DX" VerticalAlignment="Top" Margin="11,140,0,0"/>
+        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="11,193,0,0"/>
+        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="11,229,0,0"/>
+        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,270,0,0"/>
+        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,310,0,0"/>
+        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="127,193,0,0"/>
+        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="127,229,0,0"/>
+        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="127,270,0,0"/>
+        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="127,310,0,0"/>
 
     </Grid>
 </Window>
