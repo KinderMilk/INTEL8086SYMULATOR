@@ -8,7 +8,7 @@ using System.ComponentModel;
 
 namespace INTEL8086_SYMULATOR
 {
-    class Class1 : INotifyPropertyChanged
+    public class Class1 : INotifyPropertyChanged
     {
         private string ax;
         private string bx;
