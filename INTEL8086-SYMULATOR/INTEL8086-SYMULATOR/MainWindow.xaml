@@ -9,9 +9,9 @@
     <Grid Margin="0,0,0,-1">
         <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="0000" VerticalAlignment="Top" Width="120" Margin="50,33,0,0" TextChanged="TextBox_TextChanged"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="AX" VerticalAlignment="Top" Margin="10,34,0,0" Height="22"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="0000" VerticalAlignment="Top" Width="120" Margin="50,139,0,0"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="0000" VerticalAlignment="Top" Width="120" Margin="50,102,0,0"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="0000" VerticalAlignment="Top" Width="120" Margin="50,67,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="0000" VerticalAlignment="Top" Width="120" Margin="50,139,0,0" TextChanged="TextBox_TextChanged_3"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="0000" VerticalAlignment="Top" Width="120" Margin="50,102,0,0" TextChanged="TextBox_TextChanged_2"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="0000" VerticalAlignment="Top" Width="120" Margin="50,67,0,0" TextChanged="TextBox_TextChanged_1"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="BX" VerticalAlignment="Top" Margin="11,68,0,0"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="CX" VerticalAlignment="Top" Margin="10,103,0,0"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="DX" VerticalAlignment="Top" Margin="11,140,0,0"/>
