@@ -15,18 +15,18 @@
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="BX" VerticalAlignment="Top" Margin="11,68,0,0"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="CX" VerticalAlignment="Top" Margin="10,103,0,0"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="DX" VerticalAlignment="Top" Margin="11,140,0,0"/>
-        <Button x:Name ="AXBX" Content="MOV AX,BX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="11,193,0,0"/>
-        <Button x:Name ="AXCX" Content="MOV AX,CX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="11,218,0,0"/>
-        <Button x:Name ="AXDX" Content="MOV AX,DX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="11,243,0,0" RenderTransformOrigin="0.538,-0.694"/>
-        <Button x:Name ="BXAX" Content="MOV BX,AX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="11,270,0,0"/>
-        <Button x:Name ="BXCX" Content="MOV BX,CX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="11,295,0,0"/>
-        <Button x:Name ="BXDX" Content="MOV BX,DX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="11,320,0,0" RenderTransformOrigin="-1.081,5.118"/>
-        <Button x:Name ="CXAX" Content="MOV CX,AX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,345,0,0"/>
-        <Button x:Name ="CXBX" Content="MOV CX,BX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="11,370,0,0"/>
-        <Button x:Name ="CXDX" Content="MOV CX,DX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="11,395,0,0" RenderTransformOrigin="0.538,-2.123"/>
-        <Button x:Name ="DXAX" Content="MOV DX,AX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,420,0,0"/>
-        <Button x:Name ="DXBX" Content="MOV DX,BX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="11,445,0,0"/>
-        <Button x:Name ="DXCX" Content="MOV DX,CX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="11,470,0,0"/>
+        <Button x:Name ="AXBX" Click="AXBX_Click" Content="MOV AX,BX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="11,193,0,0"/>
+        <Button x:Name ="AXCX" Click="AXCX_Click" Content="MOV AX,CX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="11,218,0,0"/>
+        <Button x:Name ="AXDX" Click="AXDX_Click" Content="MOV AX,DX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="11,243,0,0" RenderTransformOrigin="0.538,-0.694"/>
+        <Button x:Name ="BXAX" Click="BXAX_Click" Content="MOV BX,AX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="11,270,0,0"/>
+        <Button x:Name ="BXCX" Click="BXCX_Click" Content="MOV BX,CX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="11,295,0,0"/>
+        <Button x:Name ="BXDX" Click="BXDX_Click" Content="MOV BX,DX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="11,320,0,0" RenderTransformOrigin="-1.081,5.118"/>
+        <Button x:Name ="CXAX" Click="CXAX_Click" Content="MOV CX,AX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,345,0,0"/>
+        <Button x:Name ="CXBX" Click="CXBX_Click" Content="MOV CX,BX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="11,370,0,0"/>
+        <Button x:Name ="CXDX" Click="CXDX_Click" Content="MOV CX,DX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="11,395,0,0" RenderTransformOrigin="0.538,-2.123"/>
+        <Button x:Name ="DXAX" Click="DXAX_Click" Content="MOV DX,AX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,420,0,0"/>
+        <Button x:Name ="DXBX" Click="DXBX_Click" Content="MOV DX,BX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="11,445,0,0"/>
+        <Button x:Name ="DXCX" Click="DXCX_Click" Content="MOV DX,CX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="11,470,0,0"/>
 
     </Grid>
 </Window>
