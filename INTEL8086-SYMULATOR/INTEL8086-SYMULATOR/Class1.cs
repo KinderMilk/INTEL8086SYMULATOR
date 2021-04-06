@@ -14,7 +14,7 @@ namespace INTEL8086_SYMULATOR
         private string bx;
         private string cx;
         private string dx;
-        public string AX
+       /* public string AX
         {
             get
             {
@@ -69,7 +69,7 @@ namespace INTEL8086_SYMULATOR
                 if (res) dx = value;
                 OnPropertyChanged("DX");
             }
-        }
+        }*/
         public event PropertyChangedEventHandler PropertyChanged;
 
         private void OnPropertyChanged(string property)

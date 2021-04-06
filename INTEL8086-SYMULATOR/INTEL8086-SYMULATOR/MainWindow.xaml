@@ -7,11 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="800">
     <Grid Margin="0,0,0,-1">
-        <TextBox x:Name="AX_TXB" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding Path=AX,Mode=TwoWay}" VerticalAlignment="Top" Width="120" Margin="50,33,0,0" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="AX_TXB" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="0000" VerticalAlignment="Top" Width="120" Margin="50,33,0,0" TextChanged="TextBox_TextChanged"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="AX" VerticalAlignment="Top" Margin="10,34,0,0" Height="22"/>
-        <TextBox x:Name="DX_TXB" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding Path=DX,Mode=TwoWay}" VerticalAlignment="Top" Width="120" Margin="50,139,0,0" TextChanged="TextBox_TextChanged_3"/>
-        <TextBox x:Name="CX_TXB" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding Path=CX,Mode=TwoWay}" VerticalAlignment="Top" Width="120" Margin="50,102,0,0" TextChanged="TextBox_TextChanged_2"/>
-        <TextBox x:Name="BX_TXB" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding Path=BX,Mode=TwoWay}" VerticalAlignment="Top" Width="120" Margin="50,67,0,0" TextChanged="TextBox_TextChanged_1"/>
+        <TextBox x:Name="DX_TXB" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="0000" VerticalAlignment="Top" Width="120" Margin="50,139,0,0" TextChanged="TextBox_TextChanged_3"/>
+        <TextBox x:Name="CX_TXB" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="0000" VerticalAlignment="Top" Width="120" Margin="50,102,0,0" TextChanged="TextBox_TextChanged_2"/>
+        <TextBox x:Name="BX_TXB" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="0000" VerticalAlignment="Top" Width="120" Margin="50,67,0,0" TextChanged="TextBox_TextChanged_1"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="BX" VerticalAlignment="Top" Margin="11,68,0,0"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="CX" VerticalAlignment="Top" Margin="10,103,0,0"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="DX" VerticalAlignment="Top" Margin="11,140,0,0"/>
@@ -27,6 +27,8 @@
         <Button x:Name ="DXAX" Click="DXAX_Click" Content="MOV DX,AX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,420,0,0"/>
         <Button x:Name ="DXBX" Click="DXBX_Click" Content="MOV DX,BX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="11,445,0,0"/>
         <Button x:Name ="DXCX" Click="DXCX_Click" Content="MOV DX,CX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="11,470,0,0"/>
+        <Button Content="RESET" Click="Button_Click_2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="105" Margin="236,34,0,0" Height="39"/>
+        <Button Content="RANDOM" Click="Button_Click_3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="117" Margin="362,34,0,0" Height="39"/>
 
     </Grid>
 </Window>

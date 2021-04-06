@@ -27,8 +27,8 @@ namespace INTEL8086_SYMULATOR
         public MainWindow()
         {
             InitializeComponent();
-            rejestry = new Class1 { AX = "00000", BX = "00000" };
-            this.DataContext = rejestry;
+           // rejestry = new Class1 { AX = "00000", BX = "00000",CX = "00000",DX="00000" };
+           // this.DataContext = rejestry;
             
         }
 
@@ -114,6 +114,40 @@ namespace INTEL8086_SYMULATOR
             DX_TXB.Text = CX_TXB.Text;
         }
 
-       
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)//reset
+        {
+            AX_TXB.Text = "0000";
+            BX_TXB.Text = "0000";
+            CX_TXB.Text = "0000";
+            DX_TXB.Text = "0000";
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+
+            var random = new Random();
+                int a = random.Next(65535);
+                int b = random.Next(65535);
+                int c = random.Next(65535);
+                int d = random.Next(65535);
+
+            AX_TXB.Text = a.ToString("X");
+            BX_TXB.Text = b.ToString("X");
+            CX_TXB.Text = c.ToString("X");
+            DX_TXB.Text = d.ToString("X");
+
+
+
+        }
     }
 }
