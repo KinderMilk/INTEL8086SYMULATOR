@@ -38,7 +38,7 @@ namespace ConsoleApp1
                         }
                     case 3:
                         {
-                            jaka();
+                            jaka(ax, bx, cx, dx);
                             break;
                         }
                     case 2:
@@ -141,22 +141,58 @@ namespace ConsoleApp1
             Console.WriteLine(" 4 - BY WYJŚĆ");
             
         }
-        static void jaka() 
+        static void jaka(string ax, string bx, string cx, string dx) 
         {
+            int choice;
             Console.WriteLine("JAKĄ OPERACJĘ CHCESZ WYKONAC?");
             Console.WriteLine("WPISZ -CYFRE- Z PONIŻSZYCH I KLIKNIJ ENTER");
             Console.WriteLine();
-            Console.WriteLine(" 01 MOV AX AX|| 11 MOV BX AX|| 21 MOV CX AX|| 31 MOV DX AX");
-            Console.WriteLine(" 02 MOV AX BX|| 12 MOV BX BX|| 22 MOV CX BX|| 32 MOV DX BX");
-            Console.WriteLine(" 03 MOV AX CX|| 13 MOV BX CX|| 23 MOV CX CX|| 33 MOV DX CX");
-            Console.WriteLine(" 04 MOV AX DX|| 14 MOV BX DX|| 24 MOV CX DX|| 35 MOV DX DX");
+            Console.WriteLine(" 1 MOV || 2 XCHG");
             Console.WriteLine();
-            Console.WriteLine(" 001 XCHG AX AX|| 101 XCHG BX AX|| 201 XCHG CX AX|| 301 XCHG DX AX");
-            Console.WriteLine(" 002 XCHG AX BX|| 102 XCHG BX BX|| 202 XCHG CX BX|| 302 XCHG DX AB");
-            Console.WriteLine(" 003 XCHG AX CX|| 103 XCHG BX CX|| 203 XCHG CX CX|| 303 XCHG DX AC");
-            Console.WriteLine(" 004 XCHG AX DX|| 104 XCHG BX DX|| 204 XCHG CX DX|| 304 XCHG DX DX");
+            choice = int.Parse(Console.ReadLine());
+            if (choice == 1) 
+            {
+                jakiMOV(ax, bx, cx, dx);
+
+            }
+            if (choice == 2) 
+            {
+                jakiXCHG(ax, bx, cx, dx);
+            }
+         
             Console.WriteLine();
 
+        }
+        static void jakiMOV(string ax, string bx, string cx, string dx) 
+        {
+            string a ="nic";
+            string b ="nic";
+            Console.WriteLine("JAKA OPERACJE MOV CHCESZ WYKONAC? PRZYKLAD DLA    MOV BX,AX -(1 ENTER 2)    ");
+            Console.WriteLine("1-AX 2-BX 3-CX 4-DX");
+           int pierwsze= int.Parse(Console.ReadLine());
+           int drugie = int.Parse(Console.ReadLine());
+            switch (pierwsze)
+            {
+                case 1: { a = ax; break; }
+                case 2: { a = bx; break; }
+                case 3: { a = cx; break; }
+                case 4: { a = dx; break; }
+             
+            }
+            switch (drugie)
+            {
+                case 1: { b = ax ;break; }
+                case 2: { b = bx ;break; }
+                case 3: { b = cx ;break; }
+                case 4: { b = dx ;break; }
+
+            }
+            MOV(b, a);
+
+        }
+        static void jakiXCHG(string ax, string bx, string cx, string dx) 
+        {
+        
         }
         static string zmiana(string x) 
         {
@@ -178,7 +214,23 @@ namespace ConsoleApp1
             return nowe;
 
         }
-               
-                
+        static string MOV(string a, string b) 
+        {
+            a = b;
+
+            return a;
+        }
+        static Tuple<string, string> XCHG(string a, string b)
+        {
+
+            string temp;
+            temp = a;
+            a = b;
+            b = temp;
+
+          return Tuple.Create(a, b);
+        }
+
+
     }
 }
