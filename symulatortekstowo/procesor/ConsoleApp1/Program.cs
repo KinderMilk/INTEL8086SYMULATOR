@@ -4,7 +4,11 @@ namespace ConsoleApp1
 {
     class Program
     {
-      
+       static string ax = "0000";
+        
+       static string bx = "0000";
+        static string cx = "0000";
+        static string dx = "0000";
 
 
         static void Main()
@@ -12,10 +16,7 @@ namespace ConsoleApp1
 
             
             Random rnd = new Random();
-            string ax = "0000";
-            string bx = "0000";
-            string cx = "0000";
-            string dx = "0000";
+            
             while (true)
             {
                 operacja();
@@ -187,7 +188,17 @@ namespace ConsoleApp1
                 case 4: { b = dx ;break; }
 
             }
-            MOV(b, a);
+
+            
+            switch (drugie)
+            {
+                case 1: {  ax= b;  break; }
+                case 2: {  bx= b;  break; }
+                case 3: {  cx= b;  break; }
+                case 4: {  dx= b;  break; }
+
+            }
+
 
         }
         static void jakiXCHG(string ax, string bx, string cx, string dx) 
@@ -214,11 +225,11 @@ namespace ConsoleApp1
             return nowe;
 
         }
-        static string MOV(string a, string b) 
+        static string MOV(string aaa, string b) 
         {
-            a = b;
+            aaa = b;
 
-            return a;
+            return aaa;
         }
         static Tuple<string, string> XCHG(string a, string b)
         {
