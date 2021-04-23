@@ -10,8 +10,8 @@ namespace ConsoleApp1
         static void Main()
         {
 
-
             
+            Random rnd = new Random();
             string ax = "0000";
             string bx = "0000";
             string cx = "0000";
@@ -20,6 +20,7 @@ namespace ConsoleApp1
             {
                 operacja();
                
+                    int toBase = 16;
                     int op = int.Parse(Console.ReadLine());
                 
                 Console.WriteLine();
@@ -47,6 +48,8 @@ namespace ConsoleApp1
                             Console.WriteLine(" 2 -ABY ZMIENIC BX");
                             Console.WriteLine(" 3 -ABY ZMIENIC CX");
                             Console.WriteLine(" 4 -ABY ZMIENIC DX");
+                            Console.WriteLine(" 5 -RANDOM");
+                            Console.WriteLine(" 6- RESET");
                             int ktore = int.Parse(Console.ReadLine());
 
                             
@@ -84,6 +87,26 @@ namespace ConsoleApp1
                                             break;
 
 
+                                    }
+                                case 5:
+                                    {
+                                        ax = String.Format("{0:X}",(rnd.Next(0, 65536)));
+                                        bx = String.Format("{0:X}", (rnd.Next(0, 65536)));
+                                        cx = String.Format("{0:X}", (rnd.Next(0, 65536)));
+                                        dx = String.Format("{0:X}", (rnd.Next(0, 65536)));
+                                        Console.WriteLine("WARTOSCI ZOSTALY PODANE METODZIE RANDOM");
+
+                                        break;
+                                    }
+                                case 6:
+                                    {
+                                        ax = "0000";
+                                        bx = "0000";
+                                        cx = "0000";
+                                        dx = "0000";
+                                        Console.WriteLine( "WARTOSCI SĄ ZRESETOWANE");
+
+                                        break;
                                     }
 
 
