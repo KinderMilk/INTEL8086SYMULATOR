@@ -20,7 +20,7 @@ namespace ConsoleApp1
             {
                 operacja();
                
-                    int toBase = 16;
+                    
                     int op = int.Parse(Console.ReadLine());
                 
                 Console.WriteLine();
@@ -57,7 +57,8 @@ namespace ConsoleApp1
                             {
                                 case 1:
                                     {
-                                        ax=zmianaAX(ax);
+                                        Console.WriteLine("WPISZ DO AX REJESTRU WARTOSC ");
+                                        ax =zmiana(ax);
                                         
 
                                         break;
@@ -67,7 +68,8 @@ namespace ConsoleApp1
 
                                 case 2:
                                     {
-                                        bx=zmianaBX(bx);
+                                        Console.WriteLine("WPISZ DO BX REJESTRU WARTOSC ");
+                                        bx =zmiana(bx);
                                         break;
 
 
@@ -75,7 +77,8 @@ namespace ConsoleApp1
 
                                 case 3:
                                     {
-                                        cx=zmianaCX(cx);
+                                        Console.WriteLine("WPISZ DO CX REJESTRU WARTOSC ");
+                                        cx =zmiana(cx);
                                         break;
 
 
@@ -83,7 +86,8 @@ namespace ConsoleApp1
 
                                 case 4:
                                     {
-                                        dx=zmianaDX(dx);
+                                        Console.WriteLine("WPISZ DO DX REJESTRU WARTOSC ");
+                                        dx =zmiana(dx);
                                             break;
 
 
@@ -140,26 +144,26 @@ namespace ConsoleApp1
         static void jaka() 
         {
             Console.WriteLine("JAKĄ OPERACJĘ CHCESZ WYKONAC?");
-            Console.WriteLine("WPISZ JEDNO Z PONIŻSZYCH I KLIKNIJ ENTER");
+            Console.WriteLine("WPISZ -CYFRE- Z PONIŻSZYCH I KLIKNIJ ENTER");
             Console.WriteLine();
-            Console.WriteLine("MOV AX AX||MOV BX AX||MOV CX AX||MOV DX AX");
-            Console.WriteLine("MOV AX BX||MOV BX BX||MOV CX BX||MOV DX BX");
-            Console.WriteLine("MOV AX CX||MOV BX CX||MOV CX CX||MOV DX CX");
-            Console.WriteLine("MOV AX DX||MOV BX DX||MOV CX DX||MOV DX DX");
+            Console.WriteLine(" 01 MOV AX AX|| 11 MOV BX AX|| 21 MOV CX AX|| 31 MOV DX AX");
+            Console.WriteLine(" 02 MOV AX BX|| 12 MOV BX BX|| 22 MOV CX BX|| 32 MOV DX BX");
+            Console.WriteLine(" 03 MOV AX CX|| 13 MOV BX CX|| 23 MOV CX CX|| 33 MOV DX CX");
+            Console.WriteLine(" 04 MOV AX DX|| 14 MOV BX DX|| 24 MOV CX DX|| 35 MOV DX DX");
             Console.WriteLine();
-            Console.WriteLine("XCHG AX AX||XCHG BX AX||XCHG CX AX||XCHG DX AX");
-            Console.WriteLine("XCHG AX BX||XCHG BX BX||XCHG CX BX||XCHG DX AB");
-            Console.WriteLine("XCHG AX CX||XCHG BX CX||XCHG CX CX||XCHG DX AC");
-            Console.WriteLine("XCHG AX DX||XCHG BX DX||XCHG CX DX||XCHG DX DX");
+            Console.WriteLine(" 001 XCHG AX AX|| 101 XCHG BX AX|| 201 XCHG CX AX|| 301 XCHG DX AX");
+            Console.WriteLine(" 002 XCHG AX BX|| 102 XCHG BX BX|| 202 XCHG CX BX|| 302 XCHG DX AB");
+            Console.WriteLine(" 003 XCHG AX CX|| 103 XCHG BX CX|| 203 XCHG CX CX|| 303 XCHG DX AC");
+            Console.WriteLine(" 004 XCHG AX DX|| 104 XCHG BX DX|| 204 XCHG CX DX|| 304 XCHG DX DX");
             Console.WriteLine();
 
         }
-        static string zmianaAX(string ax) 
+        static string zmiana(string x) 
         {
-            string stare = ax;
+            string stare = x;
             int a = 0;
-            string nowe = ax;
-            Console.WriteLine("WPISZ DO AX REJESTRU WARTOSC ");
+            string nowe =   x;
+           
             try
             {
                 nowe = (Console.ReadLine());
@@ -174,71 +178,7 @@ namespace ConsoleApp1
             return nowe;
 
         }
-        static string zmianaBX(string bx)
-        {
-            string stare = bx;
-            int a = 0;
-            string nowe = bx;
-            Console.WriteLine("WPISZ DO BX REJESTRU WARTOSC ");
-            try
-            {
-                nowe = (Console.ReadLine());
-                if (nowe.Length<4)
-                {
-                    a = (Convert.ToInt32(nowe, 16));
-                }
-            }
-            catch (ArgumentException) { Console.WriteLine("prowadz poprawne dane"); }
-
-            if (a > 65536)
-            { Console.WriteLine("ZA DUZA LICZBA"); return stare; }
-            return nowe;
-
-
-
-            
-
-        }
-        static string zmianaCX(string cx)
-        {
-            string stare = cx;
-            int a = 0;
-            string nowe = cx;
-            Console.WriteLine("WPISZ DO CX REJESTRU WARTOSC ");
-            try
-            {
-                nowe = (Console.ReadLine());
-                a = (Convert.ToInt32(nowe, 16));
-
-            }
-            catch (ArgumentException) { Console.WriteLine("prowadz poprawne dane"); }
-
-            if (a > 65536)
-            { Console.WriteLine("ZA DUZA LICZBA"); return stare; }
-            return nowe;
-
-           
-
-        }
-        static string zmianaDX(string dx)
-        {
-            string stare = dx;
-            int a = 0;
-            string nowe = dx;
-            Console.WriteLine("WPISZ DO DX REJESTRU WARTOSC ");
-            try
-            {
-                nowe = (Console.ReadLine());
-                a = (Convert.ToInt32(nowe, 16));
-
-            }
-            catch (ArgumentException) { Console.WriteLine("prowadz poprawne dane"); }
-
-            if (a > 65536)
-            { Console.WriteLine("ZA DUZA LICZBA"); return stare; }
-            return nowe;
-
-        }
-        
+               
+                
     }
 }
