@@ -5,10 +5,44 @@ namespace ConsoleApp1
     class Program
     {
        static string ax = "0000";
-        
        static string bx = "0000";
-        static string cx = "0000";
-        static string dx = "0000";
+       static string cx = "0000";
+       static string dx = "0000";
+       static string AX
+        {
+            get => ax;
+
+            set
+            {
+                ax = value;
+            }
+        }
+        static string BX
+        {
+            get => bx;
+
+            set
+            {
+                bx = value;
+            }
+        }
+       static string CX
+        {
+            get => cx;
+
+            set
+            {
+                cx = value;
+            }
+        }
+       static string DX
+        { get=>dx;
+
+          set
+            { 
+                 dx = value;
+            }
+        }
 
 
         static void Main()
@@ -29,17 +63,17 @@ namespace ConsoleApp1
                 {
                     case 1: 
                         {
-                            Console.WriteLine($"AX:{ax}");
-                            Console.WriteLine($"BX:{bx}");
-                            Console.WriteLine($"CX:{cx}");
-                            Console.WriteLine($"DX:{dx}");
+                            Console.WriteLine($"AX:{Program.AX}");
+                            Console.WriteLine($"BX:{Program.BX}");
+                            Console.WriteLine($"CX:{Program.CX}");
+                            Console.WriteLine($"DX:{Program.DX}");
                             Console.WriteLine();
                             Console.WriteLine();
                             break;
                         }
                     case 3:
                         {
-                            jaka(ax, bx, cx, dx);
+                            jaka(Program.AX, Program.BX, Program.CX, Program.DX);
                             break;
                         }
                     case 2:
@@ -59,7 +93,7 @@ namespace ConsoleApp1
                                 case 1:
                                     {
                                         Console.WriteLine("WPISZ DO AX REJESTRU WARTOSC ");
-                                        ax =zmiana(ax);
+                                        Program.AX = zmiana(Program.AX);
                                         
 
                                         break;
@@ -70,7 +104,7 @@ namespace ConsoleApp1
                                 case 2:
                                     {
                                         Console.WriteLine("WPISZ DO BX REJESTRU WARTOSC ");
-                                        bx =zmiana(bx);
+                                        Program.BX = zmiana(Program.BX);
                                         break;
 
 
@@ -79,7 +113,7 @@ namespace ConsoleApp1
                                 case 3:
                                     {
                                         Console.WriteLine("WPISZ DO CX REJESTRU WARTOSC ");
-                                        cx =zmiana(cx);
+                                        Program.CX = zmiana(Program.CX);
                                         break;
 
 
@@ -88,27 +122,27 @@ namespace ConsoleApp1
                                 case 4:
                                     {
                                         Console.WriteLine("WPISZ DO DX REJESTRU WARTOSC ");
-                                        dx =zmiana(dx);
-                                            break;
+                                        Program.DX = zmiana(Program.DX);
+                                        break;
 
 
                                     }
                                 case 5:
                                     {
-                                        ax = String.Format("{0:X}",(rnd.Next(0, 65536)));
-                                        bx = String.Format("{0:X}", (rnd.Next(0, 65536)));
-                                        cx = String.Format("{0:X}", (rnd.Next(0, 65536)));
-                                        dx = String.Format("{0:X}", (rnd.Next(0, 65536)));
+                                        Program.AX = String.Format("{0:X}", (rnd.Next(0, 65536)));
+                                        Program.BX = String.Format("{0:X}", (rnd.Next(0, 65536)));
+                                        Program.CX = String.Format("{0:X}", (rnd.Next(0, 65536)));
+                                        Program.DX = String.Format("{0:X}", (rnd.Next(0, 65536)));
                                         Console.WriteLine("WARTOSCI ZOSTALY PODANE METODZIE RANDOM");
 
                                         break;
                                     }
                                 case 6:
                                     {
-                                        ax = "0000";
-                                        bx = "0000";
-                                        cx = "0000";
-                                        dx = "0000";
+                                        Program.AX = "0000";
+                                        Program.BX = "0000";
+                                        Program.CX = "0000";
+                                        Program.DX = "0000";
                                         Console.WriteLine( "WARTOSCI SĄ ZRESETOWANE");
 
                                         break;
@@ -153,7 +187,7 @@ namespace ConsoleApp1
             choice = int.Parse(Console.ReadLine());
             if (choice == 1) 
             {
-                jakiMOV(ax, bx, cx, dx);
+                MOV(ax, bx, cx, dx);
 
             }
             if (choice == 2) 
@@ -164,46 +198,47 @@ namespace ConsoleApp1
             Console.WriteLine();
 
         }
-        static void jakiMOV(string ax, string bx, string cx, string dx) 
+
+        static void MOV(string ax, string bx, string cx, string dx) 
         {
-            string a ="nic";
-            string b ="nic";
+            
+            string druga="";
             Console.WriteLine("JAKA OPERACJE MOV CHCESZ WYKONAC? PRZYKLAD DLA    MOV BX,AX -(1 ENTER 2)    ");
             Console.WriteLine("1-AX 2-BX 3-CX 4-DX");
            int pierwsze= int.Parse(Console.ReadLine());
            int drugie = int.Parse(Console.ReadLine());
+          
+            switch (drugie)
+            {
+                case 1: { druga = ax ;break; }
+                case 2: { druga = bx ;break; }
+                case 3: { druga = cx ;break; }
+                case 4: { druga = dx ;break; }
+
+            }
             switch (pierwsze)
             {
-                case 1: { a = ax; break; }
-                case 2: { a = bx; break; }
-                case 3: { a = cx; break; }
-                case 4: { a = dx; break; }
-             
-            }
-            switch (drugie)
-            {
-                case 1: { b = ax ;break; }
-                case 2: { b = bx ;break; }
-                case 3: { b = cx ;break; }
-                case 4: { b = dx ;break; }
-
-            }
-
-            
-            switch (drugie)
-            {
-                case 1: {  ax= b;  break; }
-                case 2: {  bx= b;  break; }
-                case 3: {  cx= b;  break; }
-                case 4: {  dx= b;  break; }
+                case 1: {
+                        Program.AX =druga ;
+                       ; break; }
+                case 2: {
+                        Program.BX = druga;
+                        ; break; }
+                case 3: {
+                        Program.CX = druga;
+                        ; break; }
+                case 4: {
+                        Program.DX = druga;
+                        ; break; }
 
             }
 
 
         }
+
         static void jakiXCHG(string ax, string bx, string cx, string dx) 
         {
-        
+            Console.WriteLine("test");
         }
         static string zmiana(string x) 
         {
@@ -225,12 +260,7 @@ namespace ConsoleApp1
             return nowe;
 
         }
-        static string MOV(string aaa, string b) 
-        {
-            aaa = b;
-
-            return aaa;
-        }
+     
         static Tuple<string, string> XCHG(string a, string b)
         {
 
