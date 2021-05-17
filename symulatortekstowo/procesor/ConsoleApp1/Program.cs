@@ -236,9 +236,83 @@ namespace ConsoleApp1
 
         }
 
-        static void jakiXCHG(string ax, string bx, string cx, string dx) 
+        static void jakiXCHG(string ax, string bx, string cx, string dx)
         {
-            Console.WriteLine("test");
+            string pierwsza = "";
+            string druga = "";
+            
+            Console.WriteLine("JAKA OPERACJE XCHG CHCESZ WYKONAC? PRZYKLAD DLA    XCHG BX,AX -(1 ENTER 2)    ");
+            Console.WriteLine("1-AX 2-BX 3-CX 4-DX");
+            int pierwsze = int.Parse(Console.ReadLine());
+            int drugie = int.Parse(Console.ReadLine());
+
+            switch (pierwsze)
+            {
+                case 1: { pierwsza = ax; break; }
+                case 2: { pierwsza = bx; break; }
+                case 3: { pierwsza = cx; break; }
+                case 4: { pierwsza = dx; break; }
+
+            }
+            switch (drugie)
+            {
+                case 1: { druga = ax; break; }
+                case 2: { druga = bx; break; }
+                case 3: { druga = cx; break; }
+                case 4: { druga = dx; break; }
+
+            }
+            switch (pierwsze)
+            {
+                case 1:
+                    {
+                        Program.AX = druga;
+                        ; break;
+                    }
+                case 2:
+                    {
+                        Program.BX = druga;
+                        ; break;
+                    }
+                case 3:
+                    {
+                        Program.CX = druga;
+                        ; break;
+                    }
+                case 4:
+                    {
+                        Program.DX = druga;
+                        ; break;
+                    }
+
+
+
+            }
+            switch (drugie)
+            {
+                case 1:
+                    {
+                        Program.AX = pierwsza;
+                        ; break;
+                    }
+                case 2:
+                    {
+                        Program.BX = pierwsza;
+                        ; break;
+                    }
+                case 3:
+                    {
+                        Program.CX = pierwsza;
+                        ; break;
+                    }
+                case 4:
+                    {
+                        Program.DX = pierwsza;
+                        ; break;
+                    }
+
+
+            }
         }
         static string zmiana(string x) 
         {
@@ -261,16 +335,7 @@ namespace ConsoleApp1
 
         }
      
-        static Tuple<string, string> XCHG(string a, string b)
-        {
-
-            string temp;
-            temp = a;
-            a = b;
-            b = temp;
-
-          return Tuple.Create(a, b);
-        }
+        
 
 
     }
